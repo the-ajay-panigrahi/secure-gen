@@ -19,8 +19,8 @@ const Footer = () => {
             @ajaybpanigrahi
           </a>
         </p>
-        <span class="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
-          <a class="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
+        <span className="inline-flex sm:ml-auto sm:mt-0 mt-4 justify-center sm:justify-start">
+          <a className="text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white">
             <svg
               fill="currentColor"
               strokeLinecap="round"

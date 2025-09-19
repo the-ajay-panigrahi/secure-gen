@@ -17,10 +17,8 @@ const About = () => {
           </div>
         </div>
         <div className="flex flex-wrap sm:-m-4 -mx-4 -mb-10 -mt-4 md:space-y-0 space-y-6">
-          {/* Feature 1: Our Mission */}
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
             <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5 flex-shrink-0">
-              {/* Mission: Focus on protection and security */}
               <i className="fa-solid fa-shield-halved fa-3x"></i>
             </div>
             <div className="flex-grow">
@@ -36,10 +34,8 @@ const About = () => {
             </div>
           </div>
 
-          {/* Feature 2: What We Offer */}
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
             <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5 flex-shrink-0">
-              {/* What We Offer: Focus on tools, generation, and management */}
               <i className="fa-solid fa-screwdriver-wrench fa-3x"></i>
             </div>
             <div className="flex-grow">
@@ -55,10 +51,8 @@ const About = () => {
             </div>
           </div>
 
-          {/* Feature 3: Our Vision */}
           <div className="p-4 md:w-1/3 flex flex-col text-center items-center">
             <div className="w-20 h-20 inline-flex items-center justify-center rounded-full bg-yellow-100 text-yellow-500 mb-5 flex-shrink-0">
-              {/* Our Vision: Focus on future, global impact, and community */}
               <i className="fa-solid fa-globe fa-3x"></i>
             </div>
             <div className="flex-grow">

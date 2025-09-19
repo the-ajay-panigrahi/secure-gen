@@ -1,10 +1,9 @@
-// src/components/SignUpLoginToggleForm.jsx
-import React, { useState, useEffect } from "react"; // Import useEffect
+import React, { useState, useEffect } from "react"; 
 import { useForm } from "react-hook-form";
 import { toast, Toaster } from "react-hot-toast";
 import { signUp, logIn } from "../firebaseConfig";
 import { Link, useNavigate } from "react-router-dom";
-import { useAuth } from "../context/AuthContext"; // Import useAuth
+import { useAuth } from "../context/AuthContext"; 
 
 const SignUpLoginToggleForm = () => {
   const [isSignUp, setIsSignUp] = useState(true);
@@ -15,9 +14,8 @@ const SignUpLoginToggleForm = () => {
     reset,
   } = useForm();
   const navigate = useNavigate();
-  const { currentUser, loading } = useAuth(); // Get current user and loading state
-
-  // Effect to redirect if already logged in
+  const { currentUser, loading } = useAuth(); 
+  
   useEffect(() => {
     if (!loading && currentUser) {
       navigate("/manage-passwords");
@@ -29,14 +27,9 @@ const SignUpLoginToggleForm = () => {
       if (isSignUp) {
         await signUp(data.name, data.email, data.password);
         toast.success("Account created successfully! You are now logged in.");
-        // Redirection will now happen via the useEffect hook,
-        // which listens to currentUser state change after successful auth.
-        // navigate("/manage-passwords"); // This line is not strictly needed now
       } else {
         await logIn(data.email, data.password);
         toast.success("Logged in successfully!");
-        // Redirection will now happen via the useEffect hook
-        // navigate("/manage-passwords"); // This line is not strictly needed now
       }
       reset();
     } catch (error) {
@@ -67,7 +60,6 @@ const SignUpLoginToggleForm = () => {
     }
   };
 
-  // If loading or already logged in, show nothing or a loading state
   if (loading || currentUser) {
     return (
       <div className="min-h-screen flex items-center justify-center dark:bg-gray-900 text-gray-800 dark:text-gray-200">
